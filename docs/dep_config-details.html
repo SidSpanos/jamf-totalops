@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DEP Config – Details</title>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+  <style>
+    body { font-family: sans-serif; max-width: 800px; margin: 2rem auto; padding: 1rem; }
+    nav { margin-bottom: 2rem; }
+    nav a { margin-right: 1rem; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="provisioning.html">Provisioning</a>
+    <a href="troubleshooting.html">Troubleshooting</a>
+    <a href="depnotify.html">DEPNotify UX</a>
+    <a href="automation.html">Automation</a>
+    <a href="compliance.html">Compliance</a>
+    <a href="diagrams.html">Diagrams</a>
+  </nav>
+  <main>
+<h1>DEP Config – Details</h1><p># DEP Config – Details<br><br>This document describes how to properly configure DEP (Device Enrollment Program) in Apple Business Manager for JAMF.<br><br>---<br><br>## 🧭 Device Enrollment Settings<br>- Assign MDM server (JAMF) to devices<br>- Ensure supervision is enabled<br>- Allow pairing with other devices (optional)<br>- Configure default profile to skip setup steps<br><br>## 📋 Setup Assistant Customization<br>- Skip Siri, Apple ID, Terms & Conditions, etc.<br>- Customize department and contact fields<br><br>## 🔐 MDM Authentication<br>- Optional user auth during setup<br>- Use SSO or JAMF Connect integrations<br><br>## 🧪 Testing<br>- Assign one device to a test profile<br>- Factory wipe to trigger new DEP flow<br>- Use Apple Configurator 2 for manual assignment<br><br>Linked from: [[JAMF Provisioning Flow]]<br></p>
+  </main>
+</body>
+</html>
