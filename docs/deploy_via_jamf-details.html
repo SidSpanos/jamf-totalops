@@ -1,58 +1,49 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Deploy via JAMF – Details</title>
-  <script type="module">
+<head><base href="/jamf-totalops/"/>
+<meta charset="utf-8"/>
+<title>Deploy via JAMF – Details</title>
+<script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
     mermaid.initialize({ startOnLoad: true });
   </script>
-  <style>
+<style>
     body { font-family: sans-serif; max-width: 800px; margin: 2rem auto; padding: 1rem; }
     nav { margin-bottom: 2rem; }
     nav a { margin-right: 1rem; }
   </style>
 </head>
 <body>
-  
-
-
 <header>
-  
-  <div style="text-align: center; margin-top: 1rem;">
-    <input type="text" id="searchInput" placeholder="Search this page..." onkeyup="filterDocs()" style="padding: 5px; width: 60%; max-width: 400px;">
-  </div>
+<div style="text-align: center; margin-top: 1rem;">
+<input id="searchInput" onkeyup="filterDocs()" placeholder="Search this page..." style="padding: 5px; width: 60%; max-width: 400px;" type="text"/>
+</div>
 </header>
-
-
 <header>
-  
-  <div style="text-align: center; margin-top: 1rem;">
-    <input type="text" id="searchInput" placeholder="Search this page..." onkeyup="filterDocs()" style="padding: 5px; width: 60%; max-width: 400px;">
-  </div>
+<div style="text-align: center; margin-top: 1rem;">
+<input id="searchInput" onkeyup="filterDocs()" placeholder="Search this page..." style="padding: 5px; width: 60%; max-width: 400px;" type="text"/>
+</div>
 </header>
-
-
 <header>
-  <nav>
-    <ul>
-      <li><a href="/jamf-totalops/index.html">Home</a></li>
-      <li><a href="/jamf-totalops/provisioning.html">Provisioning</a></li>
-      <li><a href="/jamf-totalops/troubleshooting.html">Troubleshooting</a></li>
-      <li><a href="/jamf-totalops/depnotify.html">DEPNotify UX</a></li>
-      <li><a href="/jamf-totalops/automation.html">Automation</a></li>
-      <li><a href="/jamf-totalops/compliance.html">Compliance</a></li>
-      <li><a href="/jamf-totalops/diagrams.html">Diagrams</a></li>
-      <li><a href="/jamf-totalops/docs.html">Docs</a></li>
-    </ul>
-  </nav>
-  <div style="text-align: center; margin-top: 1rem;">
-    <input type="text" id="searchInput" placeholder="Search this page..." onkeyup="filterDocs()" style="padding: 5px; width: 60%; max-width: 400px;">
-  </div>
+<nav>
+<ul>
+<li><a href="/jamf-totalops/index.html">Home</a></li>
+<li><a href="/jamf-totalops/provisioning.html">Provisioning</a></li>
+<li><a href="/jamf-totalops/troubleshooting.html">Troubleshooting</a></li>
+<li><a href="/jamf-totalops/depnotify.html">DEPNotify UX</a></li>
+<li><a href="/jamf-totalops/automation.html">Automation</a></li>
+<li><a href="/jamf-totalops/compliance.html">Compliance</a></li>
+<li><a href="/jamf-totalops/diagrams.html">Diagrams</a></li>
+<li><a href="/jamf-totalops/docs.html">Docs</a></li>
+</ul>
+</nav>
+<div style="text-align: center; margin-top: 1rem;">
+<input id="searchInput" onkeyup="filterDocs()" placeholder="Search this page..." style="padding: 5px; width: 60%; max-width: 400px;" type="text"/>
+</div>
 </header>
-
 <main>
-<h1>Deploy via JAMF – Details</h1><p># Deploy via JAMF – Details<br><br>Deployment strategies using JAMF policies and triggers.<br><br>---<br><br>## 🔄 Policy Types<br>- Recurring check-in<br>- Login/logout<br>- Custom triggers (e.g., `depnotify_start`)<br><br>## 🔧 Common Payloads<br>- Install software (.pkg or App Store)<br>- Run scripts (pre/post install logic)<br>- Reboot, inventory update, file copy<br><br>## 🔁 Custom Triggers<br>- Allows chaining of policies<br>- Can be executed from Terminal or JAMF script<br>- Used for DEPNotify or post-setup automation<br><br>## 🛠️ Logs & Monitoring<br>- Use Policy Logs in JAMF for troubleshooting<br>- Monitor last execution time and result<br><br>Linked from: [[JAMF Provisioning Flow]]<br></p>
-  </main>
+<h1>Deploy via JAMF – Details</h1><p># Deploy via JAMF – Details<br/><br/>Deployment strategies using JAMF policies and triggers.<br/><br/>---<br/><br/>## 🔄 Policy Types<br/>- Recurring check-in<br/>- Login/logout<br/>- Custom triggers (e.g., `depnotify_start`)<br/><br/>## 🔧 Common Payloads<br/>- Install software (.pkg or App Store)<br/>- Run scripts (pre/post install logic)<br/>- Reboot, inventory update, file copy<br/><br/>## 🔁 Custom Triggers<br/>- Allows chaining of policies<br/>- Can be executed from Terminal or JAMF script<br/>- Used for DEPNotify or post-setup automation<br/><br/>## 🛠️ Logs &amp; Monitoring<br/>- Use Policy Logs in JAMF for troubleshooting<br/>- Monitor last execution time and result<br/><br/>Linked from: [[JAMF Provisioning Flow]]<br/></p>
+</main>
 </body>
 </html>

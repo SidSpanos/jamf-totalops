@@ -1,84 +1,75 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Dep_config-details</title>
-  <script type="module">
+<head><base href="/jamf-totalops/"/>
+<meta charset="utf-8"/>
+<title>Dep_config-details</title>
+<script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
     mermaid.initialize({ startOnLoad: true });
   </script>
-  <style>
+<style>
     body { font-family: sans-serif; max-width: 800px; margin: 2rem auto; padding: 1rem; }
     nav { margin-bottom: 2rem; }
     nav a { margin-right: 1rem; }
   </style>
 </head>
 <body>
-  
-
-
 <header>
-  
-  <div style="text-align: center; margin-top: 1rem;">
-    <input type="text" id="searchInput" placeholder="Search this page..." onkeyup="filterDocs()" style="padding: 5px; width: 60%; max-width: 400px;">
-  </div>
+<div style="text-align: center; margin-top: 1rem;">
+<input id="searchInput" onkeyup="filterDocs()" placeholder="Search this page..." style="padding: 5px; width: 60%; max-width: 400px;" type="text"/>
+</div>
 </header>
-
-
 <header>
-  
-  <div style="text-align: center; margin-top: 1rem;">
-    <input type="text" id="searchInput" placeholder="Search this page..." onkeyup="filterDocs()" style="padding: 5px; width: 60%; max-width: 400px;">
-  </div>
+<div style="text-align: center; margin-top: 1rem;">
+<input id="searchInput" onkeyup="filterDocs()" placeholder="Search this page..." style="padding: 5px; width: 60%; max-width: 400px;" type="text"/>
+</div>
 </header>
-
-
 <header>
-  <nav>
-    <ul>
-      <li><a href="/jamf-totalops/index.html">Home</a></li>
-      <li><a href="/jamf-totalops/provisioning.html">Provisioning</a></li>
-      <li><a href="/jamf-totalops/troubleshooting.html">Troubleshooting</a></li>
-      <li><a href="/jamf-totalops/depnotify.html">DEPNotify UX</a></li>
-      <li><a href="/jamf-totalops/automation.html">Automation</a></li>
-      <li><a href="/jamf-totalops/compliance.html">Compliance</a></li>
-      <li><a href="/jamf-totalops/diagrams.html">Diagrams</a></li>
-      <li><a href="/jamf-totalops/docs.html">Docs</a></li>
-    </ul>
-  </nav>
-  <div style="text-align: center; margin-top: 1rem;">
-    <input type="text" id="searchInput" placeholder="Search this page..." onkeyup="filterDocs()" style="padding: 5px; width: 60%; max-width: 400px;">
-  </div>
+<nav>
+<ul>
+<li><a href="/jamf-totalops/index.html">Home</a></li>
+<li><a href="/jamf-totalops/provisioning.html">Provisioning</a></li>
+<li><a href="/jamf-totalops/troubleshooting.html">Troubleshooting</a></li>
+<li><a href="/jamf-totalops/depnotify.html">DEPNotify UX</a></li>
+<li><a href="/jamf-totalops/automation.html">Automation</a></li>
+<li><a href="/jamf-totalops/compliance.html">Compliance</a></li>
+<li><a href="/jamf-totalops/diagrams.html">Diagrams</a></li>
+<li><a href="/jamf-totalops/docs.html">Docs</a></li>
+</ul>
+</nav>
+<div style="text-align: center; margin-top: 1rem;">
+<input id="searchInput" onkeyup="filterDocs()" placeholder="Search this page..." style="padding: 5px; width: 60%; max-width: 400px;" type="text"/>
+</div>
 </header>
-
 <main>
-<h1>DEP Config – Details</h1><p># DEP Config – Details<br>
-<br>
-This document describes how to properly configure DEP (Device Enrollment Program) in Apple Business Manager for JAMF.<br>
-<br>
----<br>
-<br>
-## 🧭 Device Enrollment Settings<br>
-- Assign MDM server (JAMF) to devices<br>
-- Ensure supervision is enabled<br>
-- Allow pairing with other devices (optional)<br>
-- Configure default profile to skip setup steps<br>
-<br>
-## 📋 Setup Assistant Customization<br>
-- Skip Siri, Apple ID, Terms & Conditions, etc.<br>
-- Customize department and contact fields<br>
-<br>
-## 🔐 MDM Authentication<br>
-- Optional user auth during setup<br>
-- Use SSO or JAMF Connect integrations<br>
-<br>
-## 🧪 Testing<br>
-- Assign one device to a test profile<br>
-- Factory wipe to trigger new DEP flow<br>
-- Use Apple Configurator 2 for manual assignment<br>
-<br>
-Linked from: [[JAMF Provisioning Flow]]<br>
+<h1>DEP Config – Details</h1><p># DEP Config – Details<br/>
+<br/>
+This document describes how to properly configure DEP (Device Enrollment Program) in Apple Business Manager for JAMF.<br/>
+<br/>
+---<br/>
+<br/>
+## 🧭 Device Enrollment Settings<br/>
+- Assign MDM server (JAMF) to devices<br/>
+- Ensure supervision is enabled<br/>
+- Allow pairing with other devices (optional)<br/>
+- Configure default profile to skip setup steps<br/>
+<br/>
+## 📋 Setup Assistant Customization<br/>
+- Skip Siri, Apple ID, Terms &amp; Conditions, etc.<br/>
+- Customize department and contact fields<br/>
+<br/>
+## 🔐 MDM Authentication<br/>
+- Optional user auth during setup<br/>
+- Use SSO or JAMF Connect integrations<br/>
+<br/>
+## 🧪 Testing<br/>
+- Assign one device to a test profile<br/>
+- Factory wipe to trigger new DEP flow<br/>
+- Use Apple Configurator 2 for manual assignment<br/>
+<br/>
+Linked from: [[JAMF Provisioning Flow]]<br/>
 </p>
-  </main>
+</main>
 </body>
 </html>

@@ -1,64 +1,55 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Diagrams</title>
-  <script type="module">
+<head><base href="/jamf-totalops/"/>
+<meta charset="utf-8"/>
+<title>Diagrams</title>
+<script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
     mermaid.initialize({ startOnLoad: true });
   </script>
-  <style>
+<style>
     body { font-family: sans-serif; max-width: 800px; margin: 2rem auto; padding: 1rem; }
     nav { margin-bottom: 2rem; }
     nav a { margin-right: 1rem; }
   </style>
 </head>
 <body>
-  
-
-
 <header>
-  
-  <div style="text-align: center; margin-top: 1rem;">
-    <input type="text" id="searchInput" placeholder="Search this page..." onkeyup="filterDocs()" style="padding: 5px; width: 60%; max-width: 400px;">
-  </div>
+<div style="text-align: center; margin-top: 1rem;">
+<input id="searchInput" onkeyup="filterDocs()" placeholder="Search this page..." style="padding: 5px; width: 60%; max-width: 400px;" type="text"/>
+</div>
 </header>
-
-
 <header>
-  
-  <div style="text-align: center; margin-top: 1rem;">
-    <input type="text" id="searchInput" placeholder="Search this page..." onkeyup="filterDocs()" style="padding: 5px; width: 60%; max-width: 400px;">
-  </div>
+<div style="text-align: center; margin-top: 1rem;">
+<input id="searchInput" onkeyup="filterDocs()" placeholder="Search this page..." style="padding: 5px; width: 60%; max-width: 400px;" type="text"/>
+</div>
 </header>
-
-
 <header>
-  <nav>
-    <ul>
-      <li><a href="/jamf-totalops/index.html">Home</a></li>
-      <li><a href="/jamf-totalops/provisioning.html">Provisioning</a></li>
-      <li><a href="/jamf-totalops/troubleshooting.html">Troubleshooting</a></li>
-      <li><a href="/jamf-totalops/depnotify.html">DEPNotify UX</a></li>
-      <li><a href="/jamf-totalops/automation.html">Automation</a></li>
-      <li><a href="/jamf-totalops/compliance.html">Compliance</a></li>
-      <li><a href="/jamf-totalops/diagrams.html">Diagrams</a></li>
-      <li><a href="/jamf-totalops/docs.html">Docs</a></li>
-    </ul>
-  </nav>
-  <div style="text-align: center; margin-top: 1rem;">
-    <input type="text" id="searchInput" placeholder="Search this page..." onkeyup="filterDocs()" style="padding: 5px; width: 60%; max-width: 400px;">
-  </div>
+<nav>
+<ul>
+<li><a href="/jamf-totalops/index.html">Home</a></li>
+<li><a href="/jamf-totalops/provisioning.html">Provisioning</a></li>
+<li><a href="/jamf-totalops/troubleshooting.html">Troubleshooting</a></li>
+<li><a href="/jamf-totalops/depnotify.html">DEPNotify UX</a></li>
+<li><a href="/jamf-totalops/automation.html">Automation</a></li>
+<li><a href="/jamf-totalops/compliance.html">Compliance</a></li>
+<li><a href="/jamf-totalops/diagrams.html">Diagrams</a></li>
+<li><a href="/jamf-totalops/docs.html">Docs</a></li>
+</ul>
+</nav>
+<div style="text-align: center; margin-top: 1rem;">
+<input id="searchInput" onkeyup="filterDocs()" placeholder="Search this page..." style="padding: 5px; width: 60%; max-width: 400px;" type="text"/>
+</div>
 </header>
-
 <main>
 <h1>Mermaid Diagram</h1>
 <pre class="mermaid">
 graph TD
-  A[Define MDM Settings] --> B[Create Profiles]
-  B --> C[Scope Devices]
-  C --> D[Deploy via JAMF]
+  A[Define MDM Settings] --&gt; B[Create Profiles]
+  B --&gt; C[Scope Devices]
+  C --&gt; D[Deploy via JAMF]
 </pre>
-  </main>
+</main>
 </body>
 </html>
