@@ -14,15 +14,42 @@
   </style>
 </head>
 <body>
+  
+
+
+<header>
+  
+  <div style="text-align: center; margin-top: 1rem;">
+    <input type="text" id="searchInput" placeholder="Search this page..." onkeyup="filterDocs()" style="padding: 5px; width: 60%; max-width: 400px;">
+  </div>
+</header>
+
+
+<header>
+  
+  <div style="text-align: center; margin-top: 1rem;">
+    <input type="text" id="searchInput" placeholder="Search this page..." onkeyup="filterDocs()" style="padding: 5px; width: 60%; max-width: 400px;">
+  </div>
+</header>
+
+
+<header>
   <nav>
-    <a href="/jamf-totalops/index.html">Home</a>
-    <a href="/jamf-totalops/provisioning.html">Provisioning</a>
-    <a href="/jamf-totalops/troubleshooting.html">Troubleshooting</a>
-    <a href="/jamf-totalops/depnotify.html">DEPNotify UX</a>
-    <a href="/jamf-totalops/automation.html">Automation</a>
-    <a href="/jamf-totalops/compliance.html">Compliance</a>
-    <a href="/jamf-totalops/diagrams.html">Diagrams</a>
+    <ul>
+      <li><a href="/jamf-totalops/index.html">Home</a></li>
+      <li><a href="/jamf-totalops/provisioning.html">Provisioning</a></li>
+      <li><a href="/jamf-totalops/troubleshooting.html">Troubleshooting</a></li>
+      <li><a href="/jamf-totalops/depnotify.html">DEPNotify UX</a></li>
+      <li><a href="/jamf-totalops/automation.html">Automation</a></li>
+      <li><a href="/jamf-totalops/compliance.html">Compliance</a></li>
+      <li><a href="/jamf-totalops/diagrams.html">Diagrams</a></li>
+      <li><a href="/jamf-totalops/docs.html">Docs</a></li>
+    </ul>
   </nav>
+  <div style="text-align: center; margin-top: 1rem;">
+    <input type="text" id="searchInput" placeholder="Search this page..." onkeyup="filterDocs()" style="padding: 5px; width: 60%; max-width: 400px;">
+  </div>
+</header>
 
 <main>
 <h1>Create Profiles – Details</h1><p># Create Profiles – Details<br><br>This document outlines the structure and best practices when creating configuration profiles in JAMF Pro.<br><br>---<br><br>## 🔐 Security Payloads<br>- Password policy enforcement<br>- FileVault settings<br>- Gatekeeper and Privacy preferences<br>- Jamf Protect configuration profile inclusion<br><br>## 🌐 Network Payloads<br>- Wi-Fi auto-connect and fallback setup<br>- VPN on-demand settings<br>- Proxy auto-configuration (PAC) URLs<br><br>## 🧩 App Management<br>- Web clips and Home screen layout for iOS<br>- Managed app configuration keys<br>- Pre-approval for System Extensions<br><br>## 📈 Restrictions<br>- Block app installation/removal<br>- Disable camera, AirDrop, or screenshots<br>- Block gaming, social media, or streaming apps<br><br>## 🧪 Best Practices<br>- Use meaningful profile names<br>- Separate payload types into different profiles<br>- Test before broad deployment<br>- Monitor logs after profile deployment<br><br>Linked from: [[JAMF Provisioning Flow]]<br></p>

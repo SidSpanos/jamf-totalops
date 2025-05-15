@@ -14,15 +14,42 @@
   </style>
 </head>
 <body>
+  
+
+
+<header>
+  
+  <div style="text-align: center; margin-top: 1rem;">
+    <input type="text" id="searchInput" placeholder="Search this page..." onkeyup="filterDocs()" style="padding: 5px; width: 60%; max-width: 400px;">
+  </div>
+</header>
+
+
+<header>
+  
+  <div style="text-align: center; margin-top: 1rem;">
+    <input type="text" id="searchInput" placeholder="Search this page..." onkeyup="filterDocs()" style="padding: 5px; width: 60%; max-width: 400px;">
+  </div>
+</header>
+
+
+<header>
   <nav>
-    <a href="/jamf-totalops/index.html">Home</a>
-    <a href="/jamf-totalops/provisioning.html">Provisioning</a>
-    <a href="/jamf-totalops/troubleshooting.html">Troubleshooting</a>
-    <a href="/jamf-totalops/depnotify.html">DEPNotify UX</a>
-    <a href="/jamf-totalops/automation.html">Automation</a>
-    <a href="/jamf-totalops/compliance.html">Compliance</a>
-    <a href="/jamf-totalops/diagrams.html">Diagrams</a>
+    <ul>
+      <li><a href="/jamf-totalops/index.html">Home</a></li>
+      <li><a href="/jamf-totalops/provisioning.html">Provisioning</a></li>
+      <li><a href="/jamf-totalops/troubleshooting.html">Troubleshooting</a></li>
+      <li><a href="/jamf-totalops/depnotify.html">DEPNotify UX</a></li>
+      <li><a href="/jamf-totalops/automation.html">Automation</a></li>
+      <li><a href="/jamf-totalops/compliance.html">Compliance</a></li>
+      <li><a href="/jamf-totalops/diagrams.html">Diagrams</a></li>
+      <li><a href="/jamf-totalops/docs.html">Docs</a></li>
+    </ul>
   </nav>
+  <div style="text-align: center; margin-top: 1rem;">
+    <input type="text" id="searchInput" placeholder="Search this page..." onkeyup="filterDocs()" style="padding: 5px; width: 60%; max-width: 400px;">
+  </div>
+</header>
 
 <main>
 <h1>DEP Config – Details</h1><p># DEP Config – Details<br><br>This document describes how to properly configure DEP (Device Enrollment Program) in Apple Business Manager for JAMF.<br><br>---<br><br>## 🧭 Device Enrollment Settings<br>- Assign MDM server (JAMF) to devices<br>- Ensure supervision is enabled<br>- Allow pairing with other devices (optional)<br>- Configure default profile to skip setup steps<br><br>## 📋 Setup Assistant Customization<br>- Skip Siri, Apple ID, Terms & Conditions, etc.<br>- Customize department and contact fields<br><br>## 🔐 MDM Authentication<br>- Optional user auth during setup<br>- Use SSO or JAMF Connect integrations<br><br>## 🧪 Testing<br>- Assign one device to a test profile<br>- Factory wipe to trigger new DEP flow<br>- Use Apple Configurator 2 for manual assignment<br><br>Linked from: [[JAMF Provisioning Flow]]<br></p>
