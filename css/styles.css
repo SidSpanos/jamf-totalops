@@ -37,3 +37,9 @@ nav a:hover {
 header, #header {
   margin-bottom: 2rem;
 }
+
+.content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
