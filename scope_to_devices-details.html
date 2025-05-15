@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Scope_to_devices-details</title>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+  <style>
+    body { font-family: sans-serif; max-width: 800px; margin: 2rem auto; padding: 1rem; }
+    nav { margin-bottom: 2rem; }
+    nav a { margin-right: 1rem; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="provisioning.html">Provisioning</a>
+    <a href="troubleshooting.html">Troubleshooting</a>
+    <a href="depnotify.html">DEPNotify UX</a>
+    <a href="automation.html">Automation</a>
+    <a href="compliance.html">Compliance</a>
+    <a href="diagrams.html">Diagrams</a>
+  </nav>
+  <main>
+<h1>Scope to Devices – Details</h1><p># Scope to Devices – Details<br>
+<br>
+This section covers how to target devices or groups using Smart and Static groups in JAMF Pro.<br>
+<br>
+---<br>
+<br>
+## 🧠 Smart Groups<br>
+- Rule-based assignments (e.g., OS version, app installed, serial #)<br>
+- Dynamically updated<br>
+- Examples:<br>
+  - All iPads with OS < 16<br>
+  - Devices missing FileVault<br>
+<br>
+## 📦 Static Groups<br>
+- Manually assign devices<br>
+- Useful for one-time scope or short-term deployments<br>
+<br>
+## 🧩 Nested Scoping<br>
+- Combine Smart Groups with Profile Scoping<br>
+- Add exclusions (e.g., test devices)<br>
+<br>
+## 📌 Best Practices<br>
+- Name groups consistently<br>
+- Avoid overlapping rules between Smart Groups<br>
+- Clean up unused Smart Groups periodically<br>
+<br>
+Linked from: [[JAMF Provisioning Flow]]<br>
+</p>
+  </main>
+</body>
+</html>
