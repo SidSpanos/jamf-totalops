@@ -27,15 +27,7 @@
   </ul>
 </nav>
 
-    <a href="index.html">Home</a>
-    <a href="provisioning.html">Provisioning</a>
-    <a href="troubleshooting.html">Troubleshooting</a>
-    <a href="depnotify.html">DEPNotify UX</a>
-    <a href="automation.html">Automation</a>
-    <a href="compliance.html">Compliance</a>
-    <a href="diagrams.html">Diagrams</a>
-  </nav>
-  <main>
+<main>
 Scope Devices and Security Settings<br><br># Define MDM Settings – Details<br><br>This section outlines the specific configuration steps and settings commonly defined within an MDM setup in JAMF Pro for macOS and iOS devices.<br><br>---<br><br>## 🔧 Network Settings<br>- **Wi-Fi Configuration**  <br>  - SSID (network name)<br>  - Security type (WPA2/WPA3/Enterprise)<br>  - Hidden network toggle<br>  - Auto-join enabled<br>  - Proxy settings (manual or auto)<br><br>- **VPN Settings**  <br>  - VPN type (IKEv2, L2TP, Cisco, Custom SSL)<br>  - Authentication method (username/password, certificate)<br>  - Always-on VPN toggle<br>  - Per-app VPN assignments<br><br>---<br><br>## 🚫 Restrictions<br>- Disable AirDrop<br>- Block App Store or limit to VPP apps<br>- Prevent device name changes<br>- Disable Siri, Safari, screen capture<br>- Enforce single-app mode (for kiosk setups)<br><br>---<br><br>## 🔐 Security & Privacy<br>- Require passcode with complexity settings<br>- Limit biometric unlock (Face ID / Touch ID)<br>- Enforce FileVault encryption<br>- Set Gatekeeper levels (Mac only)<br>- Control App Tracking Transparency (iOS)<br><br>---<br><br>## 📍 Location & Supervision<br>- Supervised mode requirements for certain controls<br>- Enable Lost Mode or enable location reporting (via JAMF commands)<br>- Auto-enrollment profile trust settings<br><br>---<br><br>## 🗂️ Device Info Payloads<br>- Set organization name<br>- Asset tag and site location (via inventory extension attributes)<br>- Default language and region<br><br>---<br><br>## ✅ Best Practices<br>- Test configuration profiles on a single test device first<br>- Group settings logically (e.g., separate Wi-Fi from Restrictions)<br>- Use configuration profile version control<br>- Combine with Smart Groups for dynamic enforcement<br><br>---<br><br>Linked from: [[JAMF Provisioning Flow]]<br>
   </main>
 </body>
