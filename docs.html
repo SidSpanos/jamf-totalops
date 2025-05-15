@@ -15,18 +15,6 @@
 </head>
 <body>
   <nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="provisioning.html">Provisioning</a></li>
-    <li><a href="troubleshooting.html">Troubleshooting</a></li>
-    <li><a href="depnotify.html">DEPNotify UX</a></li>
-    <li><a href="automation.html">Automation</a></li>
-    <li><a href="compliance.html">Compliance</a></li>
-    <li><a href="diagrams.html">Diagrams</a></li>
-    <li><a href="docs.html">Docs</a></li>
-  </ul>
-</nav>
-
     <a href="index.html">Home</a>
     <a href="provisioning.html">Provisioning</a>
     <a href="troubleshooting.html">Troubleshooting</a>
@@ -36,7 +24,54 @@
     <a href="diagrams.html">Diagrams</a>
   </nav>
   <main>
-<h1>All JAMF Detail Documents</h1><ul><li><a href="docs/create_profiles-details.html">Create Profiles-Details</a></li><li><a href="docs/define_mdm_settings-details.html">Define Mdm Settings-Details</a></li><li><a href="docs/dep_config-details.html">Dep Config-Details</a></li><li><a href="docs/deploy_via_jamf-details.html">Deploy Via Jamf-Details</a></li><li><a href="docs/scope_to_devices-details.html">Scope To Devices-Details</a></li></ul>
+<h1>All JAMF Detail Documents</h1>
+<input type="text" id="searchInput" placeholder="Search docs..." onkeyup="filterDocs()" style="margin-bottom: 20px; padding: 5px; width: 100%; max-width: 600px;">
+
+<ul id="docList">
+
+  <li>
+    <details>
+      <summary>Create Profiles-Details</summary>
+      <a href="docs/create_profiles-details.html">Open Create Profiles-Details</a>
+    </details>
+  </li>
+  <li>
+    <details>
+      <summary>Define Mdm Settings-Details</summary>
+      <a href="docs/define_mdm_settings-details.html">Open Define Mdm Settings-Details</a>
+    </details>
+  </li>
+  <li>
+    <details>
+      <summary>Dep Config-Details</summary>
+      <a href="docs/dep_config-details.html">Open Dep Config-Details</a>
+    </details>
+  </li>
+  <li>
+    <details>
+      <summary>Deploy Via Jamf-Details</summary>
+      <a href="docs/deploy_via_jamf-details.html">Open Deploy Via Jamf-Details</a>
+    </details>
+  </li>
+  <li>
+    <details>
+      <summary>Scope To Devices-Details</summary>
+      <a href="docs/scope_to_devices-details.html">Open Scope To Devices-Details</a>
+    </details>
+  </li></ul>
+<script>
+function filterDocs() {
+  const input = document.getElementById("searchInput");
+  const filter = input.value.toLowerCase();
+  const items = document.querySelectorAll("#docList li");
+
+  items.forEach((item) => {
+    const text = item.textContent.toLowerCase();
+    item.style.display = text.includes(filter) ? "" : "none";
+  });
+}
+</script>
+
   </main>
 </body>
 </html>
