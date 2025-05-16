@@ -1,17 +1,109 @@
 <!DOCTYPE html>
-
 <html lang="en">
-<head><base href="/jamf-totalops/"/>
-<meta charset="utf-8"/>
-<title>Provisioning</title>
-<link href="css/styles.css" rel="stylesheet"/>
-<script defer="" src="js/header.js"></script>
-<script defer="" src="js/search.js"></script>
+<head>
+  <meta charset="utf-8" />
+  
+  <!-- Dynamic base: works local and GitHub Pages -->
+  <script>
+    if (location.hostname === "localhost") {
+      document.write('<base href="">');
+    } else {
+      document.write('<base href="/jamf-totalops/">');
+    }
+  </script>
+
+  <title>Provisioning</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/header.js"></script>
+  <script defer src="js/search.js"></script>
 </head>
 <body>
-<div id="header"></div>
-<main>
-Define MDM Settings<br/><br/># Create Profiles – Details<br/><br/>This document outlines the structure and best practices when creating configuration profiles in JAMF Pro.<br/><br/>---<br/><br/>## 🔐 Security Payloads<br/>- Password policy enforcement<br/>- FileVault settings<br/>- Gatekeeper and Privacy preferences<br/>- Jamf Protect configuration profile inclusion<br/><br/>## 🌐 Network Payloads<br/>- Wi-Fi auto-connect and fallback setup<br/>- VPN on-demand settings<br/>- Proxy auto-configuration (PAC) URLs<br/><br/>## 🧩 App Management<br/>- Web clips and Home screen layout for iOS<br/>- Managed app configuration keys<br/>- Pre-approval for System Extensions<br/><br/>## 📈 Restrictions<br/>- Block app installation/removal<br/>- Disable camera, AirDrop, or screenshots<br/>- Block gaming, social media, or streaming apps<br/><br/>## 🧪 Best Practices<br/>- Use meaningful profile names<br/>- Separate payload types into different profiles<br/>- Test before broad deployment<br/>- Monitor logs after profile deployment<br/><br/>Linked from: [[JAMF Provisioning Flow]]<br/><br/><br/>Create Profiles<br/><br/># DEP Config – Details<br/><br/>This document describes how to properly configure DEP (Device Enrollment Program) in Apple Business Manager for JAMF.<br/><br/>---<br/><br/>## 🧭 Device Enrollment Settings<br/>- Assign MDM server (JAMF) to devices<br/>- Ensure supervision is enabled<br/>- Allow pairing with other devices (optional)<br/>- Configure default profile to skip setup steps<br/><br/>## 📋 Setup Assistant Customization<br/>- Skip Siri, Apple ID, Terms &amp; Conditions, etc.<br/>- Customize department and contact fields<br/><br/>## 🔐 MDM Authentication<br/>- Optional user auth during setup<br/>- Use SSO or JAMF Connect integrations<br/><br/>## 🧪 Testing<br/>- Assign one device to a test profile<br/>- Factory wipe to trigger new DEP flow<br/>- Use Apple Configurator 2 for manual assignment<br/><br/>Linked from: [[JAMF Provisioning Flow]]<br/>
-</main>
+  <div id="header"></div>
+
+  <div class="content">
+    <main>
+      <h1>Define MDM Settings</h1>
+
+      <h2># Create Profiles – Details</h2>
+      <p>This document outlines the structure and best practices when creating configuration profiles in JAMF Pro.</p>
+
+      <hr>
+
+      <h3>🔐 Security Payloads</h3>
+      <ul>
+        <li>Password policy enforcement</li>
+        <li>FileVault settings</li>
+        <li>Gatekeeper and Privacy preferences</li>
+        <li>Jamf Protect configuration profile inclusion</li>
+      </ul>
+
+      <h3>🌐 Network Payloads</h3>
+      <ul>
+        <li>Wi-Fi auto-connect and fallback setup</li>
+        <li>VPN on-demand settings</li>
+        <li>Proxy auto-configuration (PAC) URLs</li>
+      </ul>
+
+      <h3>🧩 App Management</h3>
+      <ul>
+        <li>Web clips and Home screen layout for iOS</li>
+        <li>Managed app configuration keys</li>
+        <li>Pre-approval for System Extensions</li>
+      </ul>
+
+      <h3>📈 Restrictions</h3>
+      <ul>
+        <li>Block app installation/removal</li>
+        <li>Disable camera, AirDrop, or screenshots</li>
+        <li>Block gaming, social media, or streaming apps</li>
+      </ul>
+
+      <h3>🧪 Best Practices</h3>
+      <ul>
+        <li>Use meaningful profile names</li>
+        <li>Separate payload types into different profiles</li>
+        <li>Test before broad deployment</li>
+        <li>Monitor logs after profile deployment</li>
+      </ul>
+
+      <p><strong>Linked from:</strong> JAMF Provisioning Flow</p>
+
+      <h2>Create Profiles</h2>
+
+      <h2># DEP Config – Details</h2>
+      <p>This document describes how to properly configure DEP (Device Enrollment Program) in Apple Business Manager for JAMF.</p>
+
+      <hr>
+
+      <h3>🧭 Device Enrollment Settings</h3>
+      <ul>
+        <li>Assign MDM server (JAMF) to devices</li>
+        <li>Ensure supervision is enabled</li>
+        <li>Allow pairing with other devices (optional)</li>
+        <li>Configure default profile to skip setup steps</li>
+      </ul>
+
+      <h3>📋 Setup Assistant Customization</h3>
+      <ul>
+        <li>Skip Siri, Apple ID, Terms & Conditions, etc.</li>
+        <li>Customize department and contact fields</li>
+      </ul>
+
+      <h3>🔐 MDM Authentication</h3>
+      <ul>
+        <li>Optional user auth during setup</li>
+        <li>Use SSO or JAMF Connect integrations</li>
+      </ul>
+
+      <h3>🧪 Testing</h3>
+      <ul>
+        <li>Assign one device to a test profile</li>
+        <li>Factory wipe to trigger new DEP flow</li>
+        <li>Use Apple Configurator 2 for manual assignment</li>
+      </ul>
+
+      <p><strong>Linked from:</strong> JAMF Provisioning Flow</p>
+    </main>
+  </div>
 </body>
 </html>

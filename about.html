@@ -1,16 +1,35 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<base href="/jamf-totalops/"/>
-<title>JAMF TotalOps - About</title>
-<link href="css/styles.css" rel="stylesheet"/>
-<script defer="" src="js/header.js"></script>
-<script defer="" src="js/search.js"></script>
+  <meta charset="utf-8" />
+
+  <!-- Dynamic base path -->
+  <script>
+    if (location.hostname === "localhost") {
+      document.write('<base href="">');
+    } else {
+      document.write('<base href="/jamf-totalops/">');
+    }
+  </script>
+
+  <title>Create Profiles – Details</title>
+<link rel="stylesheet" href="css/styles.css" />
+<script defer src="js/header.js"></script>
+<script defer src="js/search.js"></script>
+
+
+  <!-- Mermaid support (only if this page includes diagrams) -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      mermaid.initialize({ startOnLoad: true });
+    });
+  </script>
 </head>
 <body>
-<div id="header"></div>
+  <div id="header"></div>
+
+  <div class="content">
 <main>
 <h1>About This Project</h1>
 <p>JAMF TotalOps is a centralized documentation portal for JAMF IT workflows.</p>

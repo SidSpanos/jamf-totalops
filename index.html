@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <base href="/jamf-totalops/"/>
+  <meta charset="utf-8" />
+
+  <!-- 🔧 Dynamic base: works on localhost AND GitHub Pages -->
+  <script>
+    if (location.hostname === "localhost") {
+      document.write('<base href="">');
+    } else {
+      document.write('<base href="/jamf-totalops/">');
+    }
+  </script>
+
   <title>JAMF TotalOps - Home</title>
-  <link href="css/styles.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/styles.css" />
   <script defer src="js/header.js"></script>
   <script defer src="js/search.js"></script>
 </head>
 <body>
-  <!-- Full-width header injected here -->
+  <!-- Header will be injected here -->
   <div id="header"></div>
 
-  <!-- Centered page content starts here -->
+  <!-- Centered main content area -->
   <div class="content">
     <main>
       <h1>Welcome to JAMF TotalOps</h1>
-      <img alt="JAMF TotalOps Logo" src="assets/jamf_total_ops.png" style="max-width: 300px;"/>
+      <img alt="JAMF TotalOps Logo" src="assets/jamf_total_ops.png" style="max-width: 300px;" />
       <p>This is your centralized hub for provisioning, automation, compliance, and more.</p>
     </main>
   </div>
 </body>
 </html>
-

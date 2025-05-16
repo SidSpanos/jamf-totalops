@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <script>
+    if (location.hostname === "localhost") {
+      document.write('<base href="">');
+    } else {
+      document.write('<base href="/jamf-totalops/">');
+    }
+  </script>
+  <title>JAMF TotalOps - Home</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/header.js"></script>
+  <script defer src="js/search.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      mermaid.initialize({ startOnLoad: true });
+    });
+  </script>
+  <style>
+    .mermaid {
+      font-size: 16px;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="header"></div>
+
+  <div class="content">
+    <main>
+      <h1>JAMF TotalOps</h1>
+      <p>This site is your centralized hub for provisioning, automation, compliance, and end-user readiness using JAMF.</p>
+
+      <h2>Master Workflow Overview</h2>
+      <div class="mermaid">
+graph TD
+
+  %% Provisioning
+  ABM[[Apple Business Manager]] --> DEP[[DEP Config]]
+  DEP --> ENROLL[[Auto-Enrollment]]
+
+  %% Automation
+  ABM --> PROFILES[[Create Profiles]]
+  DEP --> SCOPES[[Scope to Devices]]
+
+  %% Post-Config
+  PROFILES --> APPLY[[Apply JAMF Profiles]]
+  SCOPES --> UX[[DEPNotify UX]]
+
+  %% End Result
+  APPLY --> FINAL[[Ready-to-use iPad]]
+  UX --> FINAL
+      </div>
+
+      <h3>Quick Access</h3>
+      <ul>
+        <li><a href="provisioning.html">Provisioning Guide</a></li>
+        <li><a href="automation.html">Automation Setup</a></li>
+        <li><a href="depnotify.html">DEPNotify UX</a></li>
+        <li><a href="compliance.html">Compliance Checklists</a></li>
+        <li><a href="jamf_master_flow.html">Master Flow (Click-enabled)</a></li>
+      </ul>
+    </main>
+  </div>
+</body>
+</html>

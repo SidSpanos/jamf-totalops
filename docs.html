@@ -1,93 +1,94 @@
 <!DOCTYPE html>
-
 <html lang="en">
-<head><base href="/jamf-totalops/"/>
-<meta charset="utf-8"/>
-<title>Docs</title>
-<script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({ startOnLoad: true });
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Dynamic base path -->
+  <script>
+    if (location.hostname === "localhost") {
+      document.write('<base href="">');
+    } else {
+      document.write('<base href="/jamf-totalops/">');
+    }
   </script>
-<style>
-    body { font-family: sans-serif; max-width: 800px; margin: 2rem auto; padding: 1rem; }
-    nav { margin-bottom: 2rem; }
-    nav a { margin-right: 1rem; }
-  </style>
+
+  <title>Docs</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/header.js"></script>
+  <script defer src="js/search.js"></script>
+
+  <!-- Mermaid (optional for docs page if needed) -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      mermaid.initialize({ startOnLoad: true });
+    });
+  </script>
 </head>
 <body>
-<header>
-<div style="text-align: center; margin-top: 1rem;">
-<input id="searchInput" onkeyup="filterDocs()" placeholder="Search this page..." style="padding: 5px; width: 60%; max-width: 400px;" type="text"/>
-</div>
-</header>
-<header>
-<div style="text-align: center; margin-top: 1rem;">
-<input id="searchInput" onkeyup="filterDocs()" placeholder="Search this page..." style="padding: 5px; width: 60%; max-width: 400px;" type="text"/>
-</div>
-</header>
-<header>
-<nav>
-<ul>
-<li><a href="/jamf-totalops/index.html">Home</a></li>
-<li><a href="/jamf-totalops/provisioning.html">Provisioning</a></li>
-<li><a href="/jamf-totalops/troubleshooting.html">Troubleshooting</a></li>
-<li><a href="/jamf-totalops/depnotify.html">DEPNotify UX</a></li>
-<li><a href="/jamf-totalops/automation.html">Automation</a></li>
-<li><a href="/jamf-totalops/compliance.html">Compliance</a></li>
-<li><a href="/jamf-totalops/diagrams.html">Diagrams</a></li>
-<li><a href="/jamf-totalops/docs.html">Docs</a></li>
-</ul>
-</nav>
-<div style="text-align: center; margin-top: 1rem;">
-<input id="searchInput" onkeyup="filterDocs()" placeholder="Search this page..." style="padding: 5px; width: 60%; max-width: 400px;" type="text"/>
-</div>
-</header>
-<main>
-<h1>All JAMF Detail Documents</h1>
-<input id="searchInput" onkeyup="filterDocs()" placeholder="Search docs..." style="margin-bottom: 20px; padding: 5px; width: 100%; max-width: 600px;" type="text"/>
-<ul id="docList">
-<li>
-<details>
-<summary>Create Profiles-Details</summary>
-<a href="/jamf-totalops/docs/create_profiles-details.html">Open Create Profiles-Details</a>
-</details>
-</li>
-<li>
-<details>
-<summary>Define Mdm Settings-Details</summary>
-<a href="/jamf-totalops/docs/define_mdm_settings-details.html">Open Define Mdm Settings-Details</a>
-</details>
-</li>
-<li>
-<details>
-<summary>Dep Config-Details</summary>
-<a href="/jamf-totalops/docs/dep_config-details.html">Open Dep Config-Details</a>
-</details>
-</li>
-<li>
-<details>
-<summary>Deploy Via Jamf-Details</summary>
-<a href="/jamf-totalops/docs/deploy_via_jamf-details.html">Open Deploy Via Jamf-Details</a>
-</details>
-</li>
-<li>
-<details>
-<summary>Scope To Devices-Details</summary>
-<a href="/jamf-totalops/docs/scope_to_devices-details.html">Open Scope To Devices-Details</a>
-</details>
-</li></ul>
-<script>
-function filterDocs() {
-  const input = document.getElementById("searchInput");
-  const filter = input.value.toLowerCase();
-  const items = document.querySelectorAll("#docList li");
+  <!-- Injected header/nav -->
+  <div id="header"></div>
 
-  items.forEach((item) => {
-    const text = item.textContent.toLowerCase();
-    item.style.display = text.includes(filter) ? "" : "none";
-  });
-}
-</script>
-</main>
+  <div class="content">
+    <main>
+      <h1>All JAMF Detail Documents</h1>
+
+      <!-- Search input -->
+      <input
+        id="searchInput"
+        onkeyup="filterDocs()"
+        placeholder="Search docs..."
+        style="margin-bottom: 20px; padding: 5px; width: 100%; max-width: 600px;"
+        type="text"
+      />
+
+      <!-- Document List -->
+      <ul id="docList">
+        <li>
+          <details>
+            <summary>Create Profiles-Details</summary>
+            <a href="create_profiles-details.html">Open Create Profiles-Details</a>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Define MDM Settings-Details</summary>
+            <a href="define_mdm_settings-details.html">Open Define MDM Settings-Details</a>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>DEP Config-Details</summary>
+            <a href="dep_config-details.html">Open DEP Config-Details</a>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Deploy Via JAMF-Details</summary>
+            <a href="deploy_via_jamf-details.html">Open Deploy Via JAMF-Details</a>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Scope To Devices-Details</summary>
+            <a href="scope_to_devices-details.html">Open Scope To Devices-Details</a>
+          </details>
+        </li>
+      </ul>
+
+      <script>
+        function filterDocs() {
+          const input = document.getElementById("searchInput");
+          const filter = input.value.toLowerCase();
+          const items = document.querySelectorAll("#docList li");
+
+          items.forEach((item) => {
+            const text = item.textContent.toLowerCase();
+            item.style.display = text.includes(filter) ? "" : "none";
+          });
+        }
+      </script>
+    </main>
+  </div>
 </body>
 </html>

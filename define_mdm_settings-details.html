@@ -1,47 +1,35 @@
 <!DOCTYPE html>
-
 <html lang="en">
-<head><base href="/jamf-totalops/"/>
-<meta charset="utf-8"/>
-<title>Define_mdm_settings-details</title>
-<script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({ startOnLoad: true });
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Dynamic base path -->
+  <script>
+    if (location.hostname === "localhost") {
+      document.write('<base href="">');
+    } else {
+      document.write('<base href="/jamf-totalops/">');
+    }
   </script>
-<style>
-    body { font-family: sans-serif; max-width: 800px; margin: 2rem auto; padding: 1rem; }
-    nav { margin-bottom: 2rem; }
-    nav a { margin-right: 1rem; }
-  </style>
+
+  <title>Create Profiles – Details</title>
+<link rel="stylesheet" href="css/styles.css" />
+<script defer src="js/header.js"></script>
+<script defer src="js/search.js"></script>
+
+
+  <!-- Mermaid support (only if this page includes diagrams) -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      mermaid.initialize({ startOnLoad: true });
+    });
+  </script>
 </head>
 <body>
-<header>
-<div style="text-align: center; margin-top: 1rem;">
-<input id="searchInput" onkeyup="filterDocs()" placeholder="Search this page..." style="padding: 5px; width: 60%; max-width: 400px;" type="text"/>
-</div>
-</header>
-<header>
-<div style="text-align: center; margin-top: 1rem;">
-<input id="searchInput" onkeyup="filterDocs()" placeholder="Search this page..." style="padding: 5px; width: 60%; max-width: 400px;" type="text"/>
-</div>
-</header>
-<header>
-<nav>
-<ul>
-<li><a href="/jamf-totalops/index.html">Home</a></li>
-<li><a href="/jamf-totalops/provisioning.html">Provisioning</a></li>
-<li><a href="/jamf-totalops/troubleshooting.html">Troubleshooting</a></li>
-<li><a href="/jamf-totalops/depnotify.html">DEPNotify UX</a></li>
-<li><a href="/jamf-totalops/automation.html">Automation</a></li>
-<li><a href="/jamf-totalops/compliance.html">Compliance</a></li>
-<li><a href="/jamf-totalops/diagrams.html">Diagrams</a></li>
-<li><a href="/jamf-totalops/docs.html">Docs</a></li>
-</ul>
-</nav>
-<div style="text-align: center; margin-top: 1rem;">
-<input id="searchInput" onkeyup="filterDocs()" placeholder="Search this page..." style="padding: 5px; width: 60%; max-width: 400px;" type="text"/>
-</div>
-</header>
+  <div id="header"></div>
+
+  <div class="content">
 <main>
 <h1>Define MDM Settings – Details</h1><p># Define MDM Settings – Details<br/>
 <br/>
